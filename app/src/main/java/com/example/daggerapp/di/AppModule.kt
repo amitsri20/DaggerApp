@@ -1,5 +1,7 @@
-package com.example.daggerapp
+package com.example.daggerapp.di
 
+import com.example.daggerapp.SomeDependency
+import com.example.daggerapp.UtilClassImpl
 import com.example.modulea.UtilClass
 import dagger.Module
 import dagger.Provides

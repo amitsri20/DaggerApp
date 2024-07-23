@@ -1,5 +1,6 @@
-package com.example.daggerapp
+package com.example.daggerapp.di
 
+import com.example.daggerapp.ui.MainActivity
 import com.example.modulea.ModuleA
 import dagger.Component
 

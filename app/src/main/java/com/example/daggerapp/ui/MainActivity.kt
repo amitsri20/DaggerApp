@@ -1,4 +1,4 @@
-package com.example.daggerapp
+package com.example.daggerapp.ui
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,6 +9,9 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.example.daggerapp.MyApplication
+import com.example.daggerapp.R
+import com.example.daggerapp.SomeDependency
 import com.example.daggerapp.databinding.ActivityMainBinding
 import com.example.modulea.UtilProvider
 import javax.inject.Inject
