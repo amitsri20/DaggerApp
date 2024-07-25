@@ -1,8 +1,8 @@
 package com.example.daggerapp.di
 
 import com.example.daggerapp.SomeDependency
-import com.example.daggerapp.UtilClassImpl
-import com.example.modulea.UtilClass
+import com.example.daggerapp.UtilClassInAImpl
+import com.example.modulea.UtilClassInA
 import dagger.Module
 import dagger.Provides
 
@@ -14,9 +14,8 @@ class AppModule {
         return SomeDependency()
     }
 
-
     @Provides
-    fun provideUtilClass(): UtilClass {
-        return UtilClassImpl()
+    fun provideUtilClass(): UtilClassInA {
+        return UtilClassInAImpl()
     }
 }

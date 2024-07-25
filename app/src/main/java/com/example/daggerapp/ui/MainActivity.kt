@@ -13,6 +13,7 @@ import com.example.daggerapp.MyApplication
 import com.example.daggerapp.R
 import com.example.daggerapp.SomeDependency
 import com.example.daggerapp.databinding.ActivityMainBinding
+import com.example.modulea.AnotherUtilClassInA
 import com.example.modulea.UtilProvider
 import javax.inject.Inject
 
@@ -27,13 +28,17 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var utilProvider: UtilProvider
 
+    @Inject
+    lateinit var anotherUtilClassInA: AnotherUtilClassInA
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         (application as MyApplication).appComponent.inject(this)
 
         someDependency.someMethod()
-        utilProvider.methodOne()
+        utilProvider.methodToCallUtilClassInA()
+        anotherUtilClassInA.justAnotherMethod("Just another method Injected from App Module!")
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

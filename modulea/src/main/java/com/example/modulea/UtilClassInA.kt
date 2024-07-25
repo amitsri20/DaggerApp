@@ -1,7 +1,5 @@
 package com.example.modulea
 
-import android.util.Log
-
-interface UtilClass {
+interface UtilClassInA {
     fun methodA(message: String)
 }
